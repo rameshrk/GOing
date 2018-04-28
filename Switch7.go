@@ -2,34 +2,34 @@ package main
 
 import "fmt"
 
-type Page interface {
-	PrintPage()
+type Page1 interface {
+	PrintPage1()
 }
 
-type HtmlPage struct {
+type HtmlPage1 struct {
 	// Implement Page interface.
-	Page
+	Page1
 }
 
-type Image interface {
-	PrintImage() // not required to work
+type Image1 interface {
+	//PrintImage1() // not required to work
 }
 
-type ImagePage struct {
+type ImagePage1 struct {
 	// Implement Image interface.
 	//Page    // will work
-	Image
+	Image1
 }
 
-func test(value interface{}) {
+func test1(value interface{}) {
 	// Use type switch to test interface type.
 	// ... The argument is an interface.
 	switch value.(type) {
 	case nil:
 		fmt.Println("Is nil interface")
-	case Page:
+	case Page1:
 		fmt.Println("Is page interface");
-	case Image:
+	case Image1:
 		fmt.Println("Is image interface");
 	default:
 		fmt.Println("not know", value)
@@ -38,17 +38,17 @@ func test(value interface{}) {
 
 func main() {
 	// Create class that implements interface and pass to test func.
-	item1 := new(HtmlPage)
-	test(item1)
+	item1 := new(HtmlPage1)
+	test1(item1)
 
-	item2 := new(ImagePage)
-	test(item2)
+	item2 := new(ImagePage1)
+	test1(item2)
 	fmt.Println()
 
-	test(new (Page))
-	test(new (Image))
-	test(new (HtmlPage))
-	test(new (ImagePage))
+	test1(new (Page1))
+	test1(new (Image1))
+	test1(new (HtmlPage1))
+	test1(new (ImagePage1))
 
 
 }
