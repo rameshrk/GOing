@@ -34,7 +34,6 @@ func main() {
 	fooInMain()
 	outerReturn("abc")()
 
-
 	ctr_, incr_ := counter(2)
 	ctr1, incr1 := counter(12)
 	fmt.Println(ctr_())
@@ -62,7 +61,7 @@ func intSeq() func() int {
 
 }
 
-func plus() {
+func plus1() {
 	x := 0
 	increment := func() int {
 		x++
@@ -115,13 +114,10 @@ func counter(start int) (func() int, func()) {
 		return start
 	}
 
-	incr := func(){
+	incr := func() {
 		start++
 	}
-
 
 	return ctr, incr
 
 }
-
-
