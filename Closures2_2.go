@@ -37,6 +37,13 @@ func main() {
 
 	fmt.Println(output)
 
+	output1 := func(message string) string {
+		fmt.Println(message)
+		return "from return output1"
+	}
+
+	fmt.Println(output1("output1"))
+
 	// gets anonymous function and calls it
 	printfunc := getPrintMessage()
 	printfunc("Hello anonymous function using caller!")
