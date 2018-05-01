@@ -18,3 +18,11 @@ func plusplus (a,b,c int) int {
 	return a+b+c
 }
 
+
+func plus1 (a int, b int) int {
+	return 1
+}
+
+func plusplus1 (a,b int) string {
+	return 2
+}
