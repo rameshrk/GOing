@@ -43,6 +43,8 @@ func (c circle) perim() float64 {
 func (t triangle) area() float64 {
 	return 0.5 * t.height * t.breadth
 }
+
+//
 func (t triangle) perim() float64 {
 	return 0.5 * t.height * t.breadth
 }
@@ -63,3 +65,4 @@ func main() {
 	t := triangle{1, 2, 3}
 	measure(t)
 }
+
