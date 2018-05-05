@@ -14,7 +14,7 @@ func main() {
 
 	go func(msg string) {
 		fmt.Println(msg)
-		f("anonymous thrard inside")
+		f("anonymous thread inside")
 	}("anonymous thread")
 
 	fmt.Scanln()
