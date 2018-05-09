@@ -10,7 +10,7 @@ go func () { // work in background
 	// exits
 	defer close(stoppedchan)
 
-	// TODO: do setup work
+		// TODO: do setup work
 	defer func() {
 		// TODO: do teardown work
 	}()
