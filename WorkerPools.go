@@ -16,8 +16,8 @@ func workernext(id int, jobs <-chan int, results chan<- int) {
 	for j := range jobs {
 		fmt.Println(">> worker2", id, "started job", j)
 		time.Sleep(time.Second)
-		fmt.Println(">> worker2", id, "finiahed job", j)
-		results <- j * 3
+		fmt.Println(">> worker2", id, "finished job", j)
+		results <- j * 10
 	}
 }
 
@@ -37,7 +37,7 @@ func main() {
 	close(jobs)
 
 	for a := 1; a <= 5; a++ {
-		<-results
+		fmt.Println("... ", <-results)
 	}
 
 }
